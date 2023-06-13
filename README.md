@@ -17,7 +17,7 @@ constructor() ERC20("Your_Name", "GDSC") {
     mintTo = msg.sender;
   }
 ```
-in here Replace ```Your_Name``` with your name
+in here Replace ```Your_Name``` with your first name "Dont add long names it might fail"
 
 then run ``` npx hardhat compile```
 
