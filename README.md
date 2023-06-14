@@ -18,14 +18,14 @@ constructor() ERC20("Your_Name", "GDSC") {
 ```
 - in here Replace ```Your_Name``` with your first name "Dont add long names it might fail"
 
+- Now rename the ```.env.sample``` to ```.env```
+and open it 
+
+- Replace ```PRIVATE_KEY= /*your private key here*/``` with your metamask private key of your account
+
 then run ``` npx hardhat compile```
 
 You should see ```Compiled 6 Solidity files successfully``` in the terminal
-
-- Now rename the ```.env.sample``` to ```.env```
-and open it
-
-- Replace ```PRIVATE_KEY= /*your private key here*/``` with your metamask private key of your account
 
 now run
 ```
