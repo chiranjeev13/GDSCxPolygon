@@ -1,14 +1,13 @@
 
 ## Installation
 
-Clone this Repository open it in VSCode(or any other editors) and then open terminal and run
+- Clone this Repository open it in VSCode(or any other editors) and then open terminal and run
 
 ```bash
   npm install
 ```
 
-After this is done succesfully
-
+- After this is done succesfully
 goto ```contracts``` folder and in the file ```demoERC20.sol``` 
 
 ```solidity
@@ -17,31 +16,31 @@ constructor() ERC20("Your_Name", "GDSC") {
     mintTo = msg.sender;
   }
 ```
-in here Replace ```Your_Name``` with your first name "Dont add long names it might fail"
+- in here Replace ```Your_Name``` with your first name "Dont add long names it might fail"
 
 then run ``` npx hardhat compile```
 
 You should see ```Compiled 6 Solidity files successfully``` in the terminal
 
-Now rename the ```.env.sample``` to ```.env```
+- Now rename the ```.env.sample``` to ```.env```
 and open it
 
-Replace ```PRIVATE_KEY= /*your private key here*/``` with your metamask private key of your account
+- Replace ```PRIVATE_KEY= /*your private key here*/``` with your metamask private key of your account
 
 now run
 ```
 npx hardhat run scripts/deploy.js --network "zkEVM_testnet"
 ```
 
-You should see something Like this
+- You should see something Like this
 
 ```Contract Address : 0x23F65252551D30cf8C77FFDdA2873F4835Bb476A (yours will be different)```
 
-The hex which will be generate is your ***Contract Address*** on zkEVM testnet
+- The hex which will be generate is your ***Contract Address*** on zkEVM testnet
 
 #### Woila !!! You have succesfully deployed your ERC20 smart Contract on Polygon zk-EVM.
 
-Now its time to mint the tokens in your account
+- Now its time to mint the tokens in your account
 
 To do that 
 
@@ -51,20 +50,20 @@ in ```scripts``` folder goto ```mint.js```
 const contractAddress = "/* your contract address */" ;
 ```
 
-put the ***contract address*** you just got above
+- put the ***contract address*** you just got above
 
 
 
 ```js
 const amount = 20; /* amount of tokens to mint */
 ```
-put the no of tokens you want to mint
+- put the no of tokens you want to mint
 
 then run 
 ```bash 
 npx hardhat run scripts/mint.js
 ```
-After succesfully executing you should see something simillar to this
+- After succesfully executing you should see something simillar to this
 
 ```bash 
 {
@@ -86,16 +85,16 @@ After succesfully executing you should see something simillar to this
 }
 ```
 
-Now to Claim the **Giveaway Prize** you need to send me some of your Tokens
+- Now to Claim the **Giveaway Prize** you need to send me some of your Tokens
 
-to do that 
+To do that 
 
-open ```transfer.js``` file in ```scripts``` put in your ***contract address*** just as you did in mint.js
+- open ```transfer.js``` file in ```scripts``` put in your ***contract address*** just as you did in mint.js
 ```js
 const contractAddress = "/* your contract address */";
 ```
 
-change the amount 
+- change the amount 
 ```js
 const amount = ethers.utils.parseUnits("2"/* token amount */, 18);
 ```
@@ -104,7 +103,7 @@ and then run
 
 ```npx hardhat run scripts/transfer.js```
 
-if succesfully done you should see something like this 
+- if succesfully done you should see something like this 
 
 ```js
 {
