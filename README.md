@@ -4,7 +4,7 @@
 - Clone this Repository open it in VSCode(or any other editors) and then open terminal and run
 
 ```bash
-  npm install
+  npm install --force
 ```
 
 - After this is done succesfully
